@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Event drafts · Evendraft AU</title>
+<meta name="description" content="Plans and invites for Australian community events: working bees, sausage sizzles, trivia nights and street Christmas parties. Invite, run sheet and shopping list in a minute.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<meta name="theme-color" content="#f3f6f1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="/">Evendraft <span>AU</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/tenders">Tenders</a>
+      <a href="/events" aria-current="page">Events</a>
+      <a class="nav-cta" href="/tenders#memo">Free memo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Event drafts</p>
+      <h1>Plan the event in a minute.</h1>
+      <p class="lede">Pick the event and fill in a few details. You get the invite, the run sheet and the shopping list, with times on your state's clock, daylight saving included.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap tool-grid">
+      <form class="card" id="draft-form" autocomplete="off" aria-labelledby="form-title">
+        <div class="card-head">
+          <h2 class="memo-title" id="form-title">Your event</h2>
+          <span class="chip">Example filled in</span>
+        </div>
+        <div class="form-grid">
+          <label class="field span-2" for="f-type">Event
+            <select id="f-type" name="type">
+              <option value="bee">Working bee</option>
+              <option value="sizzle">Sausage sizzle fundraiser</option>
+              <option value="trivia">Trivia night fundraiser</option>
+              <option value="xmas">Street Christmas party</option>
+            </select>
+          </label>
+          <label class="field span-2" for="f-group">Hosted by
+            <input id="f-group" name="group" type="text" maxlength="120">
+          </label>
+          <label class="field span-2" for="f-place">Where
+            <input id="f-place" name="place" type="text" maxlength="160">
+          </label>
+          <label class="field" for="f-date">Date
+            <input id="f-date" name="date" type="date">
+          </label>
+          <label class="field" for="f-start">Starts
+            <input id="f-start" name="start" type="time" step="900">
+          </label>
+          <label class="field" for="f-state">State or territory
+            <select id="f-state" name="state">
+              <option>VIC</option>
+              <option>NSW</option>
+              <option>ACT</option>
+              <option>QLD</option>
+              <option>SA</option>
+              <option>WA</option>
+              <option>TAS</option>
+              <option>NT</option>
+            </select>
+          </label>
+          <label class="field" for="f-people">Headcount
+            <input id="f-people" name="people" type="number" min="1" max="5000" step="1" inputmode="numeric">
+          </label>
+        </div>
+      </form>
+
+      <div class="card">
+        <div class="tabs" role="tablist" aria-label="Your draft">
+          <button type="button" role="tab" id="t-invite" aria-selected="true" aria-controls="p-invite">Invite</button>
+          <button type="button" role="tab" id="t-run" aria-selected="false" aria-controls="p-run" tabindex="-1">Run sheet</button>
+          <button type="button" role="tab" id="t-list" aria-selected="false" aria-controls="p-list" tabindex="-1">Shopping list</button>
+        </div>
+        <div id="p-invite" role="tabpanel" aria-labelledby="t-invite">
+          <div class="invite" id="invite-text"></div>
+          <div class="actions panel-actions">
+            <button type="button" class="btn" id="copy-btn">Copy invite</button>
+            <button type="button" class="btn btn-ghost" id="ics-btn">Add to calendar</button>
+            <a class="btn btn-ghost" id="wa-link" href="https://wa.me/" target="_blank" rel="noopener">Share on WhatsApp</a>
+          </div>
+          <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+        <div id="p-run" role="tabpanel" aria-labelledby="t-run" hidden>
+          <ol class="run" id="run-list"></ol>
+          <p class="panel-note" id="run-note"></p>
+        </div>
+        <div id="p-list" role="tabpanel" aria-labelledby="t-list" hidden>
+          <ul class="buy" id="buy-list"></ul>
+          <p class="panel-note" id="buy-note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p><strong>Evendraft AU</strong> is the Australian desk of <a href="https://evendraft.pages.dev">Evendraft</a>.</p>
+    <p>Event drafts are made in your browser from fixed templates. Nothing you type here is sent or stored.</p>
+  </div>
+</footer>
+<script src="/assets/events.js" defer></script>
+</body>
+</html>

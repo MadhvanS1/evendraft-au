@@ -1,0 +1,13 @@
+.DS_Store
+.wrangler/
+node_modules/
+# The earlier one-page test version is kept locally only and never published.
+archive/
+# Raw downloads from the open collections; the resized copies the site uses live in site/assets/img and site/assets/media.
+assets/*
+!assets/credits.json
+# Screenshots from design checks.
+.taste-skill/inspect/
+.taste-skill/before/
+.taste-skill/uk-ref/
+.taste-skill/after/
