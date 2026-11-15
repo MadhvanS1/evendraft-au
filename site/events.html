@@ -3,46 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Event drafts · Evendraft AU</title>
-<meta name="description" content="Plans and invites for Australian community events: working bees, sausage sizzles, trivia nights and street Christmas parties. Invite, run sheet and shopping list in a minute.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<meta name="theme-color" content="#f3f6f1">
+<title>Event drafts for Australian community groups · Evendraft AU</title>
+<meta name="description" content="Plans and invites for Australian community events: working bees, sausage sizzles, trivia nights and street Christmas parties. The invite, the run sheet and the shopping list in a minute, free.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=20261115c">
+<script src="assets/boot.js?v=20261115c"></script>
+<meta name="theme-color" content="#D2DFD6">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="wrap top-inner">
-    <a class="brand" href="/">Evendraft <span>AU</span></a>
-    <nav class="nav" aria-label="Main">
+
+<header class="top field f-mint" data-tone="mint">
+  <a class="top__wm" href="/" aria-label="Evendraft AU, home">Evendraft<b>AU</b></a>
+  <nav class="top__nav" aria-label="Main">
+    <a href="/#how">How it works</a>
+    <a href="/#memo">Sample memo</a>
+    <a href="/#price">Price</a>
+    <a href="/tenders">Tenders</a>
+    <a href="/events" aria-current="page">Events</a>
+  </nav>
+  <details class="top__menu">
+    <summary>Menu</summary>
+    <nav aria-label="Main, phone">
+      <a href="/#how">How it works</a>
+      <a href="/#memo">Sample memo</a>
+      <a href="/#price">Price</a>
       <a href="/tenders">Tenders</a>
       <a href="/events" aria-current="page">Events</a>
-      <a class="nav-cta" href="/tenders#memo">Free memo</a>
     </nav>
-  </div>
+  </details>
+  <a class="top__cta" href="#draft">Draft an event</a>
 </header>
 
-<main id="main">
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Event drafts</p>
-      <h1>Plan the event in a minute.</h1>
-      <p class="lede">Pick the event and fill in a few details. You get the invite, the run sheet and the shopping list, with times on your state's clock, daylight saving included.</p>
+<main id="main" class="page">
+  <section class="page-head page-head--split field f-mint chapter" data-chapter="mint" aria-labelledby="page-title">
+    <div class="g">
+      <div class="page-head__text">
+        <h1 id="page-title" class="display" data-rise>Draft the event</h1>
+        <p class="lead" data-rise data-i="1">Pick an event and add a few details. Get the invite, the run sheet and the shopping list, on your state's clock.</p>
+        <div data-rise data-i="2"><a class="button" href="#draft">Draft an event, free <span class="arrow" aria-hidden="true">↓</span></a></div>
+      </div>
+      <figure data-rise data-i="1">
+        <img src="assets/img/democracy-sausage-byron-900.webp" srcset="assets/img/democracy-sausage-byron-600.webp 600w, assets/img/democracy-sausage-byron-900.webp 900w" sizes="(max-width: 760px) 100vw, 40vw" width="900" height="1125" alt="A sausage in white bread with sauce, a cookie and a bottle of water on a napkin on a concrete kerb" decoding="async">
+        <figcaption>A democracy sausage and a cookie at a polling place in Byron Shire, NSW, on council election day 2024.</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap tool-grid">
-      <form class="card" id="draft-form" autocomplete="off" aria-labelledby="form-title">
-        <div class="card-head">
-          <h2 class="memo-title" id="form-title">Your event</h2>
-          <span class="chip">Example filled in</span>
-        </div>
-        <div class="form-grid">
-          <label class="field span-2" for="f-type">Event
+  <section class="tool field f-stone chapter" data-chapter="stone" id="draft" aria-labelledby="form-title">
+    <div class="g">
+      <form class="tool__form" id="draft-form" autocomplete="off" aria-labelledby="form-title" data-rise>
+        <div class="tool__head"><h2 id="form-title">Your event</h2><span>An example is filled in</span></div>
+        <div class="form__grid">
+          <label class="fld wide" for="f-type">Event
             <select id="f-type" name="type">
               <option value="bee">Working bee</option>
               <option value="sizzle">Sausage sizzle fundraiser</option>
@@ -50,19 +65,19 @@
               <option value="xmas">Street Christmas party</option>
             </select>
           </label>
-          <label class="field span-2" for="f-group">Hosted by
+          <label class="fld wide" for="f-group">Hosted by
             <input id="f-group" name="group" type="text" maxlength="120">
           </label>
-          <label class="field span-2" for="f-place">Where
+          <label class="fld wide" for="f-place">Where
             <input id="f-place" name="place" type="text" maxlength="160">
           </label>
-          <label class="field" for="f-date">Date
+          <label class="fld" for="f-date">Date
             <input id="f-date" name="date" type="date">
           </label>
-          <label class="field" for="f-start">Starts
+          <label class="fld" for="f-start">Starts
             <input id="f-start" name="start" type="time" step="900">
           </label>
-          <label class="field" for="f-state">State or territory
+          <label class="fld" for="f-state">State or territory
             <select id="f-state" name="state">
               <option>VIC</option>
               <option>NSW</option>
@@ -74,13 +89,14 @@
               <option>NT</option>
             </select>
           </label>
-          <label class="field" for="f-people">Headcount
+          <label class="fld" for="f-people">Headcount
             <input id="f-people" name="people" type="number" min="1" max="5000" step="1" inputmode="numeric">
           </label>
         </div>
       </form>
 
-      <div class="card">
+      <div class="tool__out" data-ui data-rise data-i="1">
+        <div class="tool__head"><h2>Your draft</h2><span>Made in your browser, nothing sent</span></div>
         <div class="tabs" role="tablist" aria-label="Your draft">
           <button type="button" role="tab" id="t-invite" aria-selected="true" aria-controls="p-invite">Invite</button>
           <button type="button" role="tab" id="t-run" aria-selected="false" aria-controls="p-run" tabindex="-1">Run sheet</button>
@@ -88,32 +104,78 @@
         </div>
         <div id="p-invite" role="tabpanel" aria-labelledby="t-invite">
           <div class="invite" id="invite-text"></div>
-          <div class="actions panel-actions">
-            <button type="button" class="btn" id="copy-btn">Copy invite</button>
-            <button type="button" class="btn btn-ghost" id="ics-btn">Add to calendar</button>
-            <a class="btn btn-ghost" id="wa-link" href="https://wa.me/" target="_blank" rel="noopener">Share on WhatsApp</a>
+          <div class="tool__actions">
+            <button type="button" class="button" id="copy-btn">Copy invite</button>
+            <button type="button" class="btn-line" id="ics-btn">Add to calendar</button>
+            <a class="btn-line" id="wa-link" href="https://wa.me/" target="_blank" rel="noopener">Share on WhatsApp</a>
           </div>
           <p class="status" id="copy-status" role="status" aria-live="polite"></p>
         </div>
         <div id="p-run" role="tabpanel" aria-labelledby="t-run" hidden>
           <ol class="run" id="run-list"></ol>
-          <p class="panel-note" id="run-note"></p>
+          <p class="tool__note" id="run-note"></p>
         </div>
         <div id="p-list" role="tabpanel" aria-labelledby="t-list" hidden>
           <ul class="buy" id="buy-list"></ul>
-          <p class="panel-note" id="buy-note"></p>
+          <p class="tool__note" id="buy-note"></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="knows field f-paper chapter" data-chapter="paper" aria-labelledby="knows-title">
+    <div class="g">
+      <div class="knows__text">
+        <h2 id="knows-title" class="head" data-rise>Small things it gets right</h2>
+        <ul class="knows__list" data-rise data-i="1">
+          <li>Queensland, Western Australia and the Northern Territory keep standard time all summer, so each draft follows its own state's clock.</li>
+          <li>A working bee opens with a welcome, an Acknowledgement of Country and a safety briefing before anyone picks up a rake.</li>
+          <li>A street party needs a council road-closure permit, and the shopping list says to apply at least six weeks ahead.</li>
+          <li>Sausage sizzle quantities allow for the customers who come back for a second snag.</li>
+          <li>The RSVP date lands five days before the event, so there is time to buy the right amount.</li>
+        </ul>
+      </div>
+      <figure class="plate" data-rise data-i="1">
+        <img src="assets/img/eucalyptus-plate-900.webp" width="900" height="1102" alt="A botanical engraving of a eucalyptus branch with leaves, buds and gum nuts" loading="lazy" decoding="async">
+        <figcaption>Eucalyptus foecunda, from Ferdinand von Mueller's Eucalyptographia, 1879.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cta-band field f-green chapter" data-chapter="green" aria-labelledby="cta-title">
+    <div class="g">
+      <figure data-rise>
+        <img src="assets/img/democracy-sausage-old-parliament-house-600.webp" srcset="assets/img/democracy-sausage-old-parliament-house-600.webp 600w, assets/img/democracy-sausage-old-parliament-house-900.webp 900w" sizes="(max-width: 760px) 100vw, 30vw" width="600" height="750" alt="A sausage in white bread with tomato sauce, held up outside Old Parliament House in Canberra" loading="lazy" decoding="async">
+        <figcaption>Outside Old Parliament House, Canberra, election day 2016.</figcaption>
+      </figure>
+      <h2 id="cta-title" data-rise>Bidding for tenders too?</h2>
+      <div class="cta-band__act" data-rise data-i="1">
+        <p>Send any federal, state or territory tender and get a free bid/no-bid memo: the must-haves checked, the criteria weighed, and a plain call.</p>
+        <a class="button" href="/#ask">Ask for a free memo</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-inner">
-    <p><strong>Evendraft AU</strong> is the Australian desk of <a href="https://evendraft.pages.dev">Evendraft</a>.</p>
-    <p>Event drafts are made in your browser from fixed templates. Nothing you type here is sent or stored.</p>
+<footer class="foot field f-dark" data-chapter="dark">
+  <div class="g foot__top">
+    <div class="foot__notes">
+      <p>Evendraft AU is the Australian desk of <a href="https://evendraft.pages.dev">Evendraft</a>, run from Bengaluru, India.</p>
+      <p class="soft">Event drafts are made in your browser from fixed templates. Nothing you type here is sent or stored.</p>
+    </div>
+    <a class="foot__back link" href="#main">Back to top <span class="arrow" aria-hidden="true">↑</span></a>
+  </div>
+  <div class="foot__name" aria-hidden="true">
+    <svg viewBox="0 0 1000 176" focusable="false"><text x="0" y="146" font-size="190" textLength="1000" lengthAdjust="spacing">Evendraft <tspan class="au">AU</tspan></text></svg>
+  </div>
+  <div class="g foot__meta">
+    <p><a href="/">Home</a><a href="/tenders">Tenders</a><a href="https://evendraft.pages.dev">Evendraft UK</a></p>
+    <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Democracy_sausage_(and_coookie)_at_the_Byron_Shire_Council_Election.jpg">“Democracy sausage (and coookie) at the Byron Shire Council Election”</a> by Aliceinthealice and <a href="https://commons.wikimedia.org/wiki/File:Democracy_Sausage.jpg">“Democracy Sausage”</a> by Democracysausage, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Eucalyptus_foecunda_from_%22Eucalyptographia._A_descriptive_atlas_of_the_eucalypts_of_Australia_and_the_adjoining_islands%22;_(1879)_(20165942804).jpg">Eucalyptus foecunda from “Eucalyptographia”</a> by Ferdinand von Mueller, no known copyright restrictions; all via Wikimedia Commons, cropped or resized.</p>
+    <p>Bengaluru · 2026</p>
   </div>
 </footer>
-<script src="/assets/events.js" defer></script>
+
+<script src="assets/site.js?v=20261115c" defer></script>
+<script src="assets/events.js?v=20261115c" defer></script>
 </body>
 </html>

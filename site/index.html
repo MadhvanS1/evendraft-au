@@ -3,108 +3,482 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Evendraft AU · Free bid/no-bid memos for Australian government tenders</title>
-<meta name="description" content="Send any Australian government tender and get a free bid/no-bid memo. Plus quick plans and invites for community events.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<meta name="theme-color" content="#f3f6f1">
+<title>Evendraft AU · Tender answers drafted to the criteria</title>
+<meta name="description" content="Evendraft AU writes tender answers for Australian businesses that bid for government contracts. Free bid/no-bid memo on any federal, state or territory tender.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=20261115c">
+<script src="assets/boot.js?v=20261115c"></script>
+<meta name="theme-color" content="#EAECE6">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="wrap top-inner">
-    <a class="brand" href="/">Evendraft <span>AU</span></a>
-    <nav class="nav" aria-label="Main">
+
+<header class="top field f-stone" data-tone="stone">
+  <a class="top__wm" href="/" aria-label="Evendraft AU, home">Evendraft<b>AU</b></a>
+  <nav class="top__nav" aria-label="Main">
+    <a href="#how">How it works</a>
+    <a href="#memo">Sample memo</a>
+    <a href="#price">Price</a>
+    <a href="/tenders">Tenders</a>
+    <a href="/events">Events</a>
+  </nav>
+  <details class="top__menu">
+    <summary>Menu</summary>
+    <nav aria-label="Main, phone">
+      <a href="#how">How it works</a>
+      <a href="#memo">Sample memo</a>
+      <a href="#price">Price</a>
       <a href="/tenders">Tenders</a>
       <a href="/events">Events</a>
-      <a class="nav-cta" href="/tenders#memo">Free memo</a>
     </nav>
-  </div>
+  </details>
+  <a class="top__cta" href="#ask">Ask for a free memo</a>
 </header>
 
-<main id="main">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">Australian government tenders</p>
-        <h1>Know if a tender is worth it before you write a word.</h1>
-        <p class="lede">Send us any federal, state or territory tender. You get a free bid/no-bid memo: what the buyer wants, what you're missing, and our honest call.</p>
-        <div class="actions">
-          <a class="btn btn-wattle" href="/tenders#memo">Ask for a free memo</a>
-          <a class="btn btn-ghost" href="/tenders#portals">Where to find tenders</a>
+<main id="main" class="page">
+
+  <section class="hero field f-stone" data-chapter="stone" aria-labelledby="hero-title">
+    <div class="mosaic">
+      <div class="tile t-memo" data-ui data-rise data-i="0">
+        <p class="ui-kicker"><span><b>Example</b> · bid/no-bid memo</span><span>All names fictional</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+        <p class="ui-title">Grounds Maintenance, Regional Depots</p>
+        <p class="ui-sub">Banksia Regional Water / ATM ID BRW-2026-114 / Request for tender, one supplier</p>
+      </div>
+      <div class="tile t-clock" data-ui data-rise data-i="1">
+        <p class="big-num" data-clock="Australia/Sydney">2:00<small>pm</small></p>
+        <p class="tile-note"><b>Canberra, <span data-zone="Australia/Sydney">AEDT</span>.</b> Every Commonwealth tender closes on this clock. It's <span data-clock-inline="Asia/Kolkata">8:30 am</span> in Bengaluru.</p>
+      </div>
+      <div class="tile t-film" data-rise data-i="2">
+        <video data-film autoplay muted loop playsinline preload="metadata" poster="assets/img/parliament-house-timelapse-poster-854.webp" width="854" height="480" aria-label="Time-lapse of Parliament House, Canberra, with clouds passing over the flagpole">
+          <source src="assets/media/parliament-house-timelapse.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="tile t-docs" data-ui data-rise data-i="3">
+        <p class="big-num">11</p>
+        <p class="tile-note">documents in the example tender pack, every one read</p>
+      </div>
+      <div class="tile t-table" data-ui data-rise data-i="4">
+        <table class="ui-table">
+          <thead><tr><th scope="col">Condition for participation</th><th scope="col">Set in</th><th scope="col">Status</th><th scope="col">Comment</th></tr></thead>
+          <tbody>
+            <tr><td>Active ABN, registered for GST</td><td>CoT 4.1</td><td><span class="tag tag-ok">Meets</span></td><td>Checked on ABN Lookup</td></tr>
+            <tr><td>$20m public liability cover</td><td>DC 14.2</td><td><span class="tag tag-act">Action</span></td><td>$10m today; broker letter before lodging</td></tr>
+            <tr><td>WHS management system</td><td>SoR 6.2</td><td><span class="tag tag-ok">Meets</span></td><td>Documented and audited in 2025</td></tr>
+            <tr><td>Working with Children checks</td><td>SoR 6.5</td><td><span class="tag tag-chk">Check</span></td><td>Two staff renewing before December</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tile t-days" data-ui data-rise data-i="5">
+        <p class="big-num" data-days-left>18<small>days</small></p>
+        <p class="tile-note" data-days-note>until the example tender closes, Thu 3 Dec at 2:00 pm ACT local time</p>
+      </div>
+      <div class="tile t-call" data-ui data-rise data-i="6">
+        <p class="big-num">3<small>/ 4</small></p>
+        <p class="tile-note"><b>Conditions met today.</b> Our call on the example: bid, once the insurance is raised.</p>
+      </div>
+      <p class="mosaic-cap">From an example memo. The tender, the buyer and the supplier are invented; the clocks are live.</p>
+    </div>
+
+    <div class="g hero__text">
+      <div class="hero__intro">
+        <p class="lead" data-rise>Evendraft AU writes tender answers for Australian businesses that bid for government contracts.</p>
+        <p class="hero__who" data-rise data-i="1"><b>Run from India by Madhvan Sharma.</b> Drafting uses AI tools; you check and approve every claim.</p>
+        <div class="hero__act" data-rise data-i="2">
+          <a class="button" href="#ask">Ask for a free memo</a>
+          <span class="small">Free, on any federal, state or territory tender</span>
+        </div>
+      </div>
+      <div class="hero__title">
+        <h1 id="hero-title" class="display" data-rise>Drafted to the criteria</h1>
+        <p class="small" data-rise data-i="1">Bid/no-bid memos are free. Answers, red-team reviews and full bids are quoted in Australian dollars before any work starts. <a class="link" href="#how">How it works</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="convert field f-dark chapter" data-chapter="dark" id="clock" aria-labelledby="clock-title">
+    <div class="g">
+      <h2 class="convert__line" id="clock-title" data-rise>
+        <label for="close-at">Closes</label>
+        <input id="close-at" class="convert__input" type="text" value="2:00 pm Thu 3 Dec" autocomplete="off" spellcheck="false" aria-describedby="clock-help">
+      </h2>
+
+      <div class="answer" data-ui data-rise data-i="1" aria-live="polite">
+        <p class="answer__head">In Canberra that's <b data-out="canberra">2:00 pm Thu 3 Dec, AEDT</b>. <span class="answer__state" data-out="left">About 18 days from now.</span></p>
+        <ul class="cities" data-out="cities">
+          <li class="city"><span class="city__name">Sydney</span><span class="city__time">2:00 pm</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city"><span class="city__name">Melbourne</span><span class="city__time">2:00 pm</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city"><span class="city__name">Hobart</span><span class="city__time">2:00 pm</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city"><span class="city__name">Adelaide</span><span class="city__time">1:30 pm</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city"><span class="city__name">Brisbane</span><span class="city__time">1:00 pm</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city"><span class="city__name">Darwin</span><span class="city__time">12:30 pm</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city"><span class="city__name">Perth</span><span class="city__time">11:00 am</span><span class="city__day">Thu 3 Dec</span></li>
+          <li class="city is-desk"><span class="city__name">Bengaluru, our desk</span><span class="city__time">8:30 am</span><span class="city__day">Thu 3 Dec</span></li>
+        </ul>
+        <ol class="plan" data-out="plan">
+          <li><span>Fri 20 Nov</span><span>Decide with the memo in hand: bid, or let it go</span></li>
+          <li><span>Thu 26 Nov</span><span>Questions to the buyer; check the ATM for its own cut-off</span></li>
+          <li><span>Mon 30 Nov</span><span>Full draft to you, with every claim marked for approval</span></li>
+          <li><span>Wed 2 Dec</span><span>Declarations signed, insurance letter and pricing ready</span></li>
+          <li><span>Thu 3 Dec, 12:00 pm</span><span>Lodge two hours early; late bids are generally refused</span></li>
+        </ol>
+      </div>
+
+      <div class="convert__aside" data-rise data-i="2">
+        <p class="lead" id="clock-help">AusTender prints closing times in ACT local time. Type one as printed.</p>
+        <div class="tries" role="group" aria-label="Try another closing time">
+          <button class="try" type="button" data-try="12 noon Friday">12 noon Friday</button>
+          <button class="try" type="button" data-try="5:00 pm 18 Dec">5:00 pm 18 Dec</button>
+          <button class="try" type="button" data-try="2 pm tomorrow">2 pm tomorrow</button>
         </div>
       </div>
 
-      <article class="card" aria-label="Example memo for a fictional tender">
-        <div class="card-head">
-          <h2 class="memo-title">Bid/no-bid memo</h2>
-          <span class="chip">Example · fictional tender</span>
+      <figure class="pano" data-rise>
+        <img src="assets/img/griffin-canberra-1912-1920.webp" srcset="assets/img/griffin-canberra-1912-1200.webp 1200w, assets/img/griffin-canberra-1912-1920.webp 1920w" sizes="100vw" width="1920" height="523" alt="A pale watercolour panorama of the planned city of Canberra, seen from the summit of Mount Ainslie" loading="lazy" decoding="async">
+        <figcaption>Canberra from Mount Ainslie, from the Griffins' winning entry in the 1911–12 Federal Capital design competition. Every Commonwealth tender still closes here.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="how field f-paper chapter" data-chapter="paper" id="how" aria-labelledby="how-title">
+    <div class="g how__intro">
+      <h2 id="how-title" class="head" data-rise>From link to lodgement</h2>
+      <p data-rise data-i="1">Send the link. We read the whole pack and tell you whether to bid. If you go ahead, we draft to the criteria, you approve every claim, and you lodge on the portal yourself.</p>
+    </div>
+    <div class="stages" data-stages data-rise data-i="2">
+      <div class="stage is-open">
+        <button class="stage__tab" type="button" aria-expanded="true" aria-controls="st-1"><span>The link</span></button>
+        <div class="stage__body" id="st-1">
+          <div class="stage__text"><h3>The link</h3><p>You send the tender's link from AusTender or a state portal. If the documents sit behind a login, you forward them by email. We never ask for passwords.</p></div>
+          <dl class="stage__frag" data-ui>
+            <p class="ui-kicker"><span><b>Email</b> · to Evendraft AU</span><span>Example</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <div class="frag-row"><dt>Subject</dt><dd>Free memo please, BRW-2026-114</dd></div>
+            <div class="frag-row"><dt>Link</dt><dd>tenders.gov.au/Atm/Show/…</dd></div>
+            <div class="frag-row"><dt>Closes</dt><dd>3-Dec-2026 2:00 pm (ACT Local Time)</dd></div>
+            <div class="frag-row"><dt>Attached</dt><dd>11 files from the ATM pack, 1 addendum</dd></div>
+          </dl>
         </div>
-        <p class="memo-sub">Grounds maintenance for regional depots · Request for tender</p>
-        <p class="verdict">Bid, if you can show two similar contracts.<small>You meet 3 of the 4 conditions for participation.</small></p>
-        <dl class="memo-rows">
-          <div><dt>Closes</dt><dd class="tabular">Thu 3 Dec 2026, 2:00 pm ACT local time<br><span class="muted">1:00 pm in Brisbane, 11:00 am in Perth</span></dd></div>
-          <div><dt>Must-haves</dt><dd><span class="ok">Met:</span> ABN, WHS management system, Working with Children checks. <span class="gap">Missing:</span> $20 million public liability cover (you hold $10 million).</dd></div>
-          <div><dt>How it's scored</dt><dd class="tabular">Capability 40% · Price 30% · Past work 20% · Local jobs 10%</dd></div>
-          <div><dt>Writing time</dt><dd>About 3 days, plus 1 for the pricing schedule</dd></div>
-        </dl>
+      </div>
+      <div class="stage">
+        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-2"><span>The memo</span></button>
+        <div class="stage__body" id="st-2">
+          <div class="stage__text"><h3>The memo</h3><p>Every condition for participation checked against your business, the criteria and their weights, the closing time on your clock, and our call.</p></div>
+          <dl class="stage__frag" data-ui>
+            <p class="ui-kicker"><span><b>Our call</b></span><span>Page 1 of 2</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <p class="frag-big">Bid, with two conditions</p>
+            <div class="frag-row"><dt>Conditions</dt><dd>3 of 4 met today</dd></div>
+            <div class="frag-row"><dt>Scored on</dt><dd>Capability 40%, price 30%, past work 20%, local benefit 10%</dd></div>
+            <div class="frag-row"><dt>Effort</dt><dd>About 3 days of writing, 1 of pricing</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="stage">
+        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-3"><span>Questions</span></button>
+        <div class="stage__body" id="st-3">
+          <div class="stage__text"><h3>Questions</h3><p>We list what to ask the buyer before questions close, worded so the published answer helps you more than anyone else.</p></div>
+          <dl class="stage__frag" data-ui>
+            <p class="ui-kicker"><span><b>Questions</b> · draft</span><span>Close Thu 26 Nov, 5:00 pm</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <div class="frag-row"><dt>Q1 · DC 14.2</dt><dd>Will a broker's letter of intent for $20m public liability be accepted at lodgement, with cover in place before award?</dd></div>
+            <div class="frag-row"><dt>Q2 · RS C</dt><dd>May one of the two similar contracts be a subcontract to a head contractor?</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="stage">
+        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-4"><span>The draft</span></button>
+        <div class="stage__body" id="st-4">
+          <div class="stage__text"><h3>The draft</h3><p>Each answer follows its criterion's own order, with your evidence placed where an evaluator looks for it. Every claim is marked for you to approve.</p></div>
+          <dl class="stage__frag" data-ui>
+            <p class="ui-kicker"><span><b>Criterion 1</b> · capability, 40%</span><span>Draft 2</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <p class="frag-big">Three crews cover the four depots on a fixed fortnightly round, with a fire-break crew on call from October to March.</p>
+            <div class="frag-row"><dt>Mapped to</dt><dd>SoR 3.1 to 3.4, SoR 4.2</dd></div>
+            <div class="frag-row"><dt>To approve</dt><dd>6 claims, 2 with figures</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="stage">
+        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-5"><span>Red team</span></button>
+        <div class="stage__body" id="st-5">
+          <div class="stage__text"><h3>Red team</h3><p>We score the full draft the way the panel will, against the published weights, and mark what to fix first.</p></div>
+          <dl class="stage__frag" data-ui>
+            <p class="ui-kicker"><span><b>Self-score</b> · red team</span><span>Out of 10</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <div class="frag-row"><dt>Capability 40%</dt><dd>8 · strong</dd></div>
+            <div class="frag-row"><dt>Past work 20%</dt><dd>6 · fix first: add the 2023 council contract</dd></div>
+            <div class="frag-row"><dt>Local benefit 10%</dt><dd>8 · strong</dd></div>
+            <div class="frag-row"><dt>Price 30%</dt><dd>Yours to set; checked against the schedule</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="stage">
+        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-6"><span>Lodgement</span></button>
+        <div class="stage__body" id="st-6">
+          <div class="stage__text"><h3>Lodgement</h3><p>You lodge on the portal from your own account, two hours early, and keep the receipt as proof of lodgement.</p></div>
+          <dl class="stage__frag" data-ui>
+            <p class="ui-kicker"><span><b>Lodgement receipt</b></span><span>Example</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <div class="frag-row"><dt>ATM ID</dt><dd>BRW-2026-114</dd></div>
+            <div class="frag-row"><dt>Received</dt><dd>3-Dec-2026 11:41 am (ACT Local Time)</dd></div>
+            <div class="frag-row"><dt>Files</dt><dd>9 lodged, 0 rejected</dd></div>
+            <div class="frag-row"><dt>Keep</dt><dd>Save and print this receipt</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="source field f-green chapter" data-chapter="green" id="memo" aria-labelledby="memo-title">
+    <div class="g source__intro">
+      <h2 id="memo-title" class="head" data-rise>Every line has a source</h2>
+      <p data-rise data-i="1">Page 1 of the example memo. Point at a line, or scroll through it, and the panel shows the document and the clause it came from.</p>
+    </div>
+    <div class="g source__body">
+      <aside class="reader" data-ui aria-label="Where the line comes from">
+        <div class="reader__panel">
+          <p class="reader__label">The line, and where it comes from</p>
+          <p class="reader__quote" data-reader-quote>Point at any line of the memo to see the clause behind it.</p>
+          <p class="reader__ref"><b data-reader-doc>Conditions of Tender</b><span data-reader-ref>Clause 1.1</span></p>
+        </div>
+        <ul class="docs" data-docs>
+          <li class="doc" data-doc="CoT"><b>CoT</b><span>Conditions of Tender</span></li>
+          <li class="doc" data-doc="SoR"><b>SoR</b><span>Statement of Requirement</span></li>
+          <li class="doc" data-doc="DC"><b>DC</b><span>Draft Contract</span></li>
+          <li class="doc" data-doc="RS A"><b>RS A</b><span>Company details</span></li>
+          <li class="doc" data-doc="RS B"><b>RS B</b><span>Capability</span></li>
+          <li class="doc" data-doc="RS C"><b>RS C</b><span>Past work and referees</span></li>
+          <li class="doc" data-doc="RS D"><b>RS D</b><span>Local benefit</span></li>
+          <li class="doc" data-doc="RS E"><b>RS E</b><span>Declarations</span></li>
+          <li class="doc" data-doc="PS"><b>PS</b><span>Pricing Schedule</span></li>
+          <li class="doc" data-doc="DoC"><b>DoC</b><span>Deed of Confidentiality</span></li>
+          <li class="doc" data-doc="Add 1"><b>Add 1</b><span>Addendum 1</span></li>
+        </ul>
+        <p class="reader__count" data-reader-count>0 of 16 cited lines read</p>
+      </aside>
+
+      <article class="sheet" aria-label="Example memo, page 1">
+        <div data-ui>
+        <p class="ui-kicker"><span><b>Example</b> · bid/no-bid memo</span><span>Prepared 13 Nov 2026 · tender, buyer and supplier are fictional</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+        <div>
+          <p class="ui-title">Grounds Maintenance, Regional Depots</p>
+          <p class="ui-sub">Banksia Regional Water / ATM ID BRW-2026-114 / Request for tender, one supplier</p>
+        </div>
+        </div>
+        <div class="facts" data-ui>
+          <div class="fact line" tabindex="0" data-src="CoT" data-ref="Clause 2.3" data-quote="The estimated value of the Contract is $1.2 million including GST over the initial term."><span>Estimated value</span><b>$1.2m inc GST, initial term</b><span><span class="src">CoT 2.3</span></span></div>
+          <div class="fact line" tabindex="0" data-src="DC" data-ref="Clause 3.2" data-quote="The initial term is three years, with two options to extend by one year each."><span>Term</span><b>3 years, plus 2 one-year options</b><span><span class="src">DC 3.2</span></span></div>
+          <div class="fact line" tabindex="0" data-src="CoT" data-ref="Clause 1.1" data-quote="Closing time: 2:00 pm (ACT local time) on Thursday 3 December 2026."><span>Closes</span><b>Thu 3 Dec, 2:00 pm ACT local time</b><span><span class="src">CoT 1.1</span></span></div>
+          <div class="fact line" tabindex="0" data-src="SoR" data-ref="Section 2.1" data-quote="Services are required at four depots and along their access easements."><span>Scope</span><b>4 depots and their easements</b><span><span class="src">SoR 2.1</span></span></div>
+          <div class="fact line" tabindex="0" data-src="CoT" data-ref="Clause 5.4" data-quote="Questions must be submitted through AusTender by 5:00 pm (ACT local time) on Thursday 26 November 2026."><span>Questions close</span><b>Thu 26 Nov, 5:00 pm</b><span><span class="src">CoT 5.4</span></span></div>
+          <div class="fact line" tabindex="0" data-src="CoT" data-ref="Clause 8.2" data-quote="Tenders will be assessed against capability (40%), price (30%), past performance (20%) and local benefit (10%)."><span>Scored on</span><b>Capability 40, price 30, past 20, local 10</b><span><span class="src">CoT 8.2</span></span></div>
+        </div>
+
+        <div class="call" data-ui>
+          <div>
+            <p class="ui-kicker"><span>Our call</span></p> <!-- taste-skill-ignore: document header inside a data-ui fragment -->
+            <p class="call__title">Bid, with two conditions</p>
+            <p class="sheet__foot">For Ridgeline Grounds: 22 staff, three crews, based in the region.</p>
+          </div>
+          <div class="call__lists">
+            <div>
+              <h4>Why bid</h4>
+              <ul>
+                <li class="line" tabindex="0" data-src="SoR" data-ref="Section 3" data-quote="The Supplier will provide mowing, slashing, weed control and fire-break maintenance at each depot.">Mowing, slashing and fire-break work at four sites is your core trade, at a size a small firm can serve. <span class="src">SoR 3</span></li>
+                <li class="line" tabindex="0" data-src="RS D" data-ref="Item 1" data-quote="Describe the benefit to the local economy, including local employment and local subcontractors.">Local benefit is a tenth of the score, and all three crews live in the region. <span class="src">RS D</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Conditions, before questions close</h4>
+              <ul>
+                <li class="line" tabindex="0" data-src="DC" data-ref="Clause 14.2" data-quote="The Supplier must hold public liability insurance of not less than $20 million for each occurrence.">Raise public liability to $20 million, or get a broker's letter that it will be in place before award. <span class="src">DC 14.2</span></li>
+                <li class="line" tabindex="0" data-src="RS C" data-ref="Item 2" data-quote="Provide two contracts of similar scope delivered in the last five years, with a referee for each.">Name two similar contracts from the last five years, each with a referee. <span class="src">RS C</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Why be careful</h4>
+              <ul>
+                <li class="line" tabindex="0" data-src="PS" data-ref="Schedule 1" data-quote="Tenderers must price each depot separately, with a rate per hectare for additional slashing.">Every depot is priced separately, so one wrong site estimate shows up in the score. <span class="src">PS 1</span></li>
+                <li class="line" tabindex="0" data-src="Add 1" data-ref="Item 3" data-quote="The site visit on 19 November is optional. Attendance will not be assessed.">The site visit on 19 Nov is optional, but it is the only look at the depots before you price. <span class="src">Add 1</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <table class="ui-table" data-ui>
+          <thead><tr><th scope="col">Gate</th><th scope="col">What the documents require</th><th scope="col">Ridgeline</th></tr></thead>
+          <tbody>
+            <tr class="line" tabindex="0" data-src="CoT" data-ref="Clause 4.1" data-quote="Tenderers must hold an active ABN and be registered for GST at the closing time."><td>ABN and GST</td><td>Active ABN, registered for GST <span class="src">CoT 4.1</span></td><td><span class="tag tag-ok">Meets</span></td></tr>
+            <tr class="line" tabindex="0" data-src="DC" data-ref="Clause 14.2" data-quote="The Supplier must hold public liability insurance of not less than $20 million for each occurrence."><td>Insurance</td><td>$20m public liability; workers' compensation as the law requires <span class="src">DC 14.2</span></td><td><span class="tag tag-act">Action</span> $10m today</td></tr>
+            <tr class="line" tabindex="0" data-src="SoR" data-ref="Section 6.2" data-quote="The Supplier must maintain a documented work health and safety management system."><td>WHS</td><td>A documented WHS management system <span class="src">SoR 6.2</span></td><td><span class="tag tag-ok">Meets</span></td></tr>
+            <tr class="line" tabindex="0" data-src="SoR" data-ref="Section 6.5" data-quote="Staff working at depots next to school grounds must hold a current Working with Children check."><td>Checks</td><td>Working with Children checks for staff near school grounds <span class="src">SoR 6.5</span></td><td><span class="tag tag-chk">Check</span> 2 renewing</td></tr>
+          </tbody>
+        </table>
+
+        <p class="sheet__foot">References: CoT Conditions of Tender; SoR Statement of Requirement; DC Draft Contract; RS Response Schedule; PS Pricing Schedule; Add Addendum. Example prepared by Evendraft AU. The tender, Banksia Regional Water and Ridgeline Grounds are invented. 1 / 2</p>
       </article>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Two things we draft</h2>
-        <p>One for businesses chasing government work, one for the people running the local fundraiser.</p>
-      </div>
-      <div class="doors">
-        <article class="card door">
-          <span class="chip">For businesses</span>
-          <h3>Tender memos</h3>
-          <p>Federal agencies and state and territory departments. Send the link, get a free bid/no-bid memo, and decide with the facts in front of you.</p>
-          <div class="actions">
-            <a class="btn" href="/tenders#memo">Ask for a free memo</a>
-            <a class="btn btn-ghost" href="/tenders#portals">Find tenders</a>
-          </div>
-        </article>
-        <article class="card door">
-          <span class="chip">For community groups</span>
-          <h3>Event drafts</h3>
-          <p>Working bees, sausage sizzles, street Christmas parties. Pick the event and get the invite, the run sheet and the shopping list, sized to your headcount.</p>
-          <div class="actions">
-            <a class="btn" href="/events">Draft an event</a>
-          </div>
-        </article>
+  <section class="about field f-mint chapter" data-chapter="mint" aria-labelledby="about-title">
+    <div class="g">
+      <h2 id="about-title" class="head" data-rise>Who you'd work with</h2>
+      <div class="about__text" data-rise data-i="1">
+        <p><b>Evendraft AU</b> is the Australian desk of Evendraft, which writes tender answers for UK companies. It is run from <span class="hl hl-p">Bengaluru</span> by Madhvan Sharma, <span class="hl hl-g">five and a half hours behind Canberra</span> in summer, so a pack you send at the end of your day is read during ours. Drafting uses <span class="hl hl-b">AI tools</span> to read every document and set each answer against the criteria. A person checks every line against its source, and <span class="hl hl-g">you approve every claim</span> before anything goes into a bid. <span class="hl hl-p">We never lodge for you</span>: the portal account, the declarations and the final click stay yours. The memo is free whether or not you bid, and when the answer is no, it says why. <a class="hl-end" href="#ask">Send us a tender link.</a></p>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap hero-grid">
-      <div class="section-head">
-        <h2>What's in a memo</h2>
-        <p>One page you can read in five minutes, built from the tender's own documents.</p>
+  <section class="price field f-dark chapter" data-chapter="dark" id="price" aria-labelledby="price-title">
+    <div class="g">
+      <div class="ticket" data-rise>
+        <div class="ticket__main">
+          <h2 id="price-title">Bid/no-bid memo</h2>
+          <ul class="ticket__lines">
+            <li>Every condition for participation, checked against your business</li>
+            <li>The criteria and their weights, from the documents</li>
+            <li>The closing time on your own clock, with a back-plan</li>
+            <li>Our call, bid or don't, and why</li>
+          </ul>
+        </div>
+        <div class="ticket__stub">
+          <span class="ticket__perf" aria-hidden="true"></span>
+          <p class="ticket__price">Free</p>
+          <p class="small">On any federal, state or territory tender</p>
+          <a class="button" href="#ask">Ask for a free memo</a>
+        </div>
       </div>
-      <ul class="ticks">
-        <li><span>The conditions for participation, checked against your business. Miss one and the bid is out before it's scored.</span></li>
-        <li><span>How the bid will be scored, with the weightings the documents give.</span></li>
-        <li><span>The closing time in your own time zone. AusTender closes in ACT local time, so in summer a 2:00 pm close is 1:00 pm in Brisbane and 11:00 am in Perth.</span></li>
-        <li><span>The paperwork to gather now: insurance certificates, policies, referees, the pricing schedule.</span></li>
-        <li><span>Our call, bid or don't, and why. A no costs you nothing either.</span></li>
-      </ul>
+      <div class="price__more" data-rise data-i="1">
+        <p>Answers, red-team reviews and full bids are quoted in Australian dollars after the memo, before any work starts. The memo costs nothing, and nothing is lodged without you.</p>
+        <a class="link" href="/tenders">Where to find tenders <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="events field f-stone chapter" data-chapter="stone" aria-labelledby="events-title">
+    <div class="g">
+      <figure data-rise>
+        <img src="assets/img/democracy-sausage-old-parliament-house-900.webp" srcset="assets/img/democracy-sausage-old-parliament-house-600.webp 600w, assets/img/democracy-sausage-old-parliament-house-900.webp 900w" sizes="(max-width: 760px) 100vw, 40vw" width="900" height="1125" alt="A sausage in white bread with tomato sauce, held up outside Old Parliament House in Canberra" loading="lazy" decoding="async">
+        <figcaption>A democracy sausage outside Old Parliament House, Canberra, on federal election day 2016.</figcaption>
+      </figure>
+      <div class="events__text">
+        <h2 id="events-title" data-rise>Running the sausage sizzle too?</h2>
+        <p class="lead" data-rise data-i="1">Evendraft AU drafts community events as well: the invite, the run sheet and the shopping list, sized to your headcount and set on your state's clock.</p>
+        <ul class="chips" data-rise data-i="2">
+          <li>Working bee</li>
+          <li>Sausage sizzle</li>
+          <li>P&amp;C trivia night</li>
+          <li>Street Christmas party</li>
+        </ul>
+        <div data-rise data-i="3"><a class="button" href="/events">Draft an event, free <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq field f-green chapter" data-chapter="green" id="faq" aria-labelledby="faq-title">
+    <div class="g">
+      <div class="faq__side">
+        <h2 id="faq-title" class="head" data-rise>Questions</h2>
+        <figure class="faq__pic" data-rise data-i="1">
+          <img src="assets/img/canberra-from-parliament-house-900.webp" srcset="assets/img/canberra-from-parliament-house-900.webp 900w, assets/img/canberra-from-parliament-house-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 30vw" width="900" height="600" alt="The view from Parliament House over Old Parliament House and Anzac Parade to Mount Ainslie" loading="lazy" decoding="async">
+          <figcaption>From Parliament House, over Old Parliament House to Mount Ainslie.</figcaption>
+        </figure>
+      </div>
+      <div class="faq__list" data-rise data-i="1">
+        <details class="q" name="faq" open>
+          <summary>Do you need my AusTender login?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">No. Send the link. If the documents sit behind the portal login, download them and forward them by email. We never ask for passwords.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>Do you lodge the bid for us?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">No. You lodge on the portal from your own account and keep the lodgement receipt. The declarations are yours to sign.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>Is the memo really free?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">Yes, whether or not you bid, and whether or not you work with us afterwards.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>Which tenders do you cover?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">Commonwealth tenders on AusTender, and state and territory tenders on their own portals: buy.nsw, Buying for Victoria, QTenders, Tenders WA, SA Tenders and Contracts, and the Tasmanian, ACT and Northern Territory portals.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>How do you use AI?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">AI tools read the documents and draft against the criteria. A person checks every line against its source, and you approve every claim. Nothing goes into a bid that you haven't seen.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>What time zone do you work in?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">The desk is in Bengaluru, five and a half hours behind Canberra in summer and four and a half in winter. Closing times are always handled in ACT local time, the way AusTender prints them.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>What does a full bid cost?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">It depends on the size of the tender and the number of criteria. We quote in Australian dollars after the memo, before any work starts.</p>
+        </details>
+        <details class="q" name="faq">
+          <summary>Can you help with a panel or standing offer?<span class="plus" aria-hidden="true"></span></summary>
+          <p class="q__a">Yes. Panels are worth the effort because agencies buy from them for years. The memo says whether this panel suits your work.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="ask field f-paper chapter" data-chapter="paper" id="ask" aria-labelledby="ask-title">
+    <div class="g">
+      <div class="ask__intro">
+        <h2 id="ask-title" data-rise>Send us a tender</h2>
+        <p class="lead" data-rise data-i="1">Paste the link from AusTender or a state portal. The memo comes back by email.</p>
+        <ul class="ask__points" data-rise data-i="2">
+          <li>Free, with no obligation</li>
+          <li>Built from the tender's own documents</li>
+          <li>If the answer is don't bid, we say so</li>
+        </ul>
+      </div>
+      <form class="form" id="memo-form" novalidate data-rise data-i="1">
+        <div class="form__grid">
+          <label class="fld wide" for="m-url">Link to the tender
+            <input id="m-url" name="tender_url" type="url" inputmode="url" placeholder="https://www.tenders.gov.au/Atm/Show/…" autocomplete="off">
+          </label>
+          <label class="fld wide" for="m-title">Or its name and reference <span class="opt">if there's no link</span>
+            <input id="m-title" name="tender_title" type="text" maxlength="300" autocomplete="off">
+          </label>
+          <label class="fld" for="m-company">Business name
+            <input id="m-company" name="company" type="text" maxlength="200" autocomplete="organization">
+          </label>
+          <label class="fld" for="m-name">Your name
+            <input id="m-name" name="name" type="text" maxlength="200" autocomplete="name">
+          </label>
+          <label class="fld wide" for="m-email">Work email
+            <input id="m-email" name="email" type="email" maxlength="160" autocomplete="email" required>
+          </label>
+          <label class="fld wide" for="m-msg">Anything we should know <span class="opt">optional</span>
+            <textarea id="m-msg" name="message" maxlength="2500" placeholder="What you do, where, and any doubts you already have about this one."></textarea>
+          </label>
+        </div>
+        <span class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="evd_extra" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true"></label></span>
+        <div class="form__foot">
+          <button class="button" type="submit" id="m-send">Ask for a free memo</button>
+          <span class="status" id="m-status" role="status" aria-live="polite"></span>
+        </div>
+        <p class="form__note">We use these details only to reply to you.</p>
+      </form>
     </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-inner">
-    <p><strong>Evendraft AU</strong> is the Australian desk of <a href="https://evendraft.pages.dev">Evendraft</a>.</p>
-    <p>We link to the official tender portals and don't copy their notices. Event drafts are made in your browser, and nothing you type there is sent or stored.</p>
+<footer class="foot field f-dark" data-chapter="dark">
+  <div class="g foot__top">
+    <div class="foot__notes">
+      <p>Evendraft AU is the Australian desk of <a href="https://evendraft.pages.dev">Evendraft</a>, run from Bengaluru, India.</p>
+      <p class="soft">We link to the official tender portals and don't copy their notices. Not connected with AusTender or any government.</p>
+    </div>
+    <a class="foot__back link" href="#main">Back to top <span class="arrow" aria-hidden="true">↑</span></a>
+  </div>
+  <div class="foot__name" aria-hidden="true">
+    <svg viewBox="0 0 1000 176" focusable="false"><text x="0" y="146" font-size="190" textLength="1000" lengthAdjust="spacing">Evendraft <tspan class="au">AU</tspan></text></svg>
+  </div>
+  <div class="g foot__meta">
+    <p><a href="/tenders">Tenders</a><a href="/events">Events</a><a href="https://evendraft.pages.dev">Evendraft UK</a></p>
+    <p class="credits">Pictures and footage: <a href="https://commons.wikimedia.org/wiki/File:Timelapse_of_the_facade_of_Parliament_House_Canberra_Australia.webm">“Timelapse of the facade of Parliament House Canberra Australia”</a> by Jared Drennan, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Canberra_plan_view-WBG.jpg">“Canberra plan view”</a> by Walter Burley Griffin, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>; <a href="https://commons.wikimedia.org/wiki/File:Democracy_Sausage.jpg">“Democracy Sausage”</a> by Democracysausage, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Canberra_(AU),_Parliament_House_and_Old_Parliament_House_--_2019_--_1767.jpg">“Canberra (AU), Parliament House and Old Parliament House”</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; all via Wikimedia Commons, resized.</p>
+    <p>Bengaluru · 2026</p>
   </div>
 </footer>
+
+<script src="assets/site.js?v=20261115c" defer></script>
+<script src="assets/memo.js?v=20261115c" defer></script>
 </body>
 </html>
