@@ -17,7 +17,7 @@ window.EVD_READY = true;
   const top = $(".top");
   const chapters = $$("[data-chapter]");
   if (top && chapters.length && "IntersectionObserver" in window) {
-    const tones = ["f-stone", "f-paper", "f-amber", "f-green", "f-dark"];
+    const tones = ["f-stone", "f-paper", "f-mint", "f-green", "f-dark"];
     const setTone = (tone) => {
       if (top.dataset.tone === tone) return;
       tones.forEach((t) => top.classList.remove(t));
@@ -52,15 +52,28 @@ window.EVD_READY = true;
           e.target.classList.add("is-in");
           rio.unobserve(e.target);
         });
-      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+      }, { rootMargin: matchMedia("(max-width: 760px)").matches ? "0px 0px 200% 0px" : "0px 0px -6% 0px", threshold: 0 });
       risers.forEach((el) => rio.observe(el));
-      // Anything already on screen at load starts at once.
-      requestAnimationFrame(() => {
+      // Belt and braces: anything whose top has reached the screen is shown, even if an observer callback is late.
+      let pending = false;
+      const sweep = () => {
+        pending = false;
+        const limit = innerHeight * 0.96;
         risers.forEach((el) => {
-          const r = el.getBoundingClientRect();
-          if (r.top < innerHeight && r.bottom > 0) { el.classList.add("is-in"); rio.unobserve(el); }
+          if (el.classList.contains("is-in")) return;
+          if (el.getBoundingClientRect().top < limit) { el.classList.add("is-in"); rio.unobserve(el); }
         });
+      };
+      addEventListener("scroll", () => { if (!pending) { pending = true; requestAnimationFrame(sweep); } }, { passive: true });
+      // Anything already on screen at load starts at once (no frame wait: some tabs throttle frames).
+      risers.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < innerHeight && r.bottom > 0) { el.classList.add("is-in"); rio.unobserve(el); }
       });
+      // Failsafe: if nothing has been revealed three seconds in, observers are not running here; show everything.
+      setTimeout(() => {
+        if (!document.querySelector("[data-rise].is-in")) risers.forEach((el) => el.classList.add("is-in"));
+      }, 3000);
     }
   }
 

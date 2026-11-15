@@ -14,14 +14,27 @@ Two things, both free to use:
 
 | Path | What it is |
 | --- | --- |
-| `site/index.html` | Home |
-| `site/tenders.html` | The official tender portals for every jurisdiction, the notice types, and the free-memo form |
-| `site/events.html`, `site/assets/events.js` | Event drafts. Runs in the browser; nothing is sent or stored |
+| `site/index.html` | Home: the example memo as a mosaic with live Canberra and Bengaluru clocks, the closing-time line (type any AusTender closing time, see it on every Australian clock with a back-plan), how it works, "every line has a source", who runs it, the price, questions and the memo form |
+| `site/tenders.html` | The nine official tender portals, the words in the notices, and the memo form |
+| `site/events.html` | Event drafts: invite, run sheet, shopping list and calendar file, on each state's clock. Runs in the browser; nothing is sent or stored |
+| `site/assets/site.css` | The Evendraft design system (Newsreader and Source Sans 3; stone, paper, ink, deep green) set as colour chapters |
+| `site/assets/site.js` | Header colour by chapter, entrances, live clocks, the closing-time line, the stages, the memo reader, the film |
 | `site/assets/memo.js` | The memo form. Posts to the Evendraft CRM web app; the message starts with `[Evendraft AU]` |
+| `site/assets/events.js` | The event-drafts tool |
+| `site/assets/fonts`, `img`, `media` | Self-hosted fonts, resized pictures and the Parliament House time-lapse |
 | `site/_headers` | Security headers for Cloudflare Pages |
 | `deploy.sh` | Publishes `site/` to the Cloudflare Pages project `evendraft-au` |
+| `.taste-skill/` | Design notes and the dealt direction |
 
 Static HTML, CSS and JavaScript. No build step, no frameworks, no trackers.
+
+## Pictures
+
+Found in open collections, credited in each page's footer and listed in `assets/credits.json`: Griffin's 1911–12 Canberra
+panorama (public domain), photographs of Parliament House and Old Parliament House by Dietmar Rabich (CC BY-SA 4.0),
+democracy sausages by Democracysausage and Aliceinthealice (CC BY-SA 4.0), a time-lapse of Parliament House by Jared
+Drennan (CC BY 3.0), and a plate from von Mueller's Eucalyptographia (1879, no known copyright restrictions). The example
+memo's tender, buyer and supplier are invented.
 
 ## Why there is no list of open tenders
 
